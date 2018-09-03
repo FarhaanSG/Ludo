@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/master.css">
+    <title></title>
+
+
+  </head>
+  <body>
+
+    <h1>Ludo</h1>
+    <h2 class = "playerTurn"></h2>
+    <div id="die1" class="dice">0</div>
+    <button onclick="rollDice()">Roll Dice</button>
+    <h2 id="status" style="clear:left;"></h2>
+
+    <div id = "mainDiv">
+      <div id="topRow">
+
+        <div id = "topLeftBox" >
+          <div id = "nw" style="margin:auto;margin-top:1.5vmin;">
+            <div style="width:28vmin;height:27vmin;margin:auto;margin-top:4vmin;background-color: white;">
+              <div id="green-4" ><div>4</div></div>
+              <div id="green-3" ><div>3</div></div>
+              <div id="green-2" ><div>2</div></div>
+              <div id="green-1" ><div>1</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div id = "topMiddleBox">
+            <div class="a" id="1">1</div>
+            <div class="a" id="2">2</div>
+            <div class="a" id="3">3</div>
+            <div class="a" id="4">4</div>
+            <div class="a red" id="5">5</div>
+            <div class="a red" id="6">6</div>
+            <div class="a" id="7">7</div>
+            <div class="a red" id="8">8</div>
+            <div class="a" id="9">9</div>
+            <div class="a" id="10">10</div>
+            <div class="a red" id="11">11</div>
+            <div class="a" id="12">12</div>
+            <div class="a" id="13">13</div>
+            <div class="a red" id="14">14</div>
+            <div class="a" id="15">15</div>
+            <div class="a" id="16">16</div>
+            <div class="a red" id="17">17</div>
+            <div class="a" id="18">18</div>
+        </div>
+
+        <div id = "topRightBox">
+          <div id = "ne" style="margin:auto;margin-top:1.5vmin;">
+            <div style="width:28vmin;height:27vmin;margin:auto;margin-top:4vmin;background-color: white;">
+              <div id="red-4" ><div>4</div></div>
+              <div id="red-3" ><div>3</div></div>
+              <div id="red-2" ><div>2</div></div>
+              <div id="red-1" ><div>1</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="middleRow">
+        <div id="middleLeft">
+          <div>
+            <div class="a" id="19">19</div>
+            <div class="a green" id="20">20</div>
+            <div class="a" id="21">21</div>
+            <div class="a" id="22">22</div>
+            <div class="a" id="23">23</div>
+            <div class="a" id="24">24</div>
+          </div>
+          <div>
+            <div class="a" id="25">25</div>
+            <div class="a green"  id="26">26</div>
+            <div class="a green"  id="27">27</div>
+            <div class="a green" id="28">28</div>
+            <div class="a green" id="29">29</div>
+            <div class="a green" id="30">30</div>
+          </div>
+          <div>
+            <div class="a" id="31">31</div>
+            <div class="a" id="32">32</div>
+            <div class="a" id="33">33</div>
+            <div class="a" id="34">34</div>
+            <div class="a" id="35">35</div>
+            <div class="a" id="36">36</div>
+          </div>
+        </div>
+
+        <div id="middleHome">
+
+        </div>
+
+        <div id="middleRight">
+          <div>
+            <div class="a" id="37">37</div>
+            <div class="a" id="38">38</div>
+            <div class="a" id="39">39</div>
+            <div class="a" id="40">40</div>
+            <div class="a" id="41">41</div>
+            <div class="a" id="42">42</div>
+          </div>
+          <div>
+            <div class="a blue" id="43">43</div>
+            <div class="a blue" id="44">44</div>
+            <div class="a blue" id="45">45</div>
+            <div class="a blue" id="46">46</div>
+            <div class="a blue" id="47">47</div>
+            <div class="a" id="48">48</div>
+          </div>
+          <div>
+            <div class="a" id="49">49</div>
+            <div class="a" id="50">50</div>
+            <div class="a" id="51">51</div>
+            <div class="a" id="52">52</div>
+            <div class="a blue" id="53">53</div>
+            <div class="a" id="54">54</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="botomRow">
+
+        <div id = "bottomLeftBox">
+          <div id = "sw" style="margin:auto;margin-top:1.5vmin;">
+            <div style="width:28vmin;height:27vmin;margin:auto;margin-top:4vmin;background-color: white;">
+              <div id="yellow-4" ><div>4</div></div>
+              <div id="yellow-3" ><div>3</div></div>
+              <div id="yellow-2" ><div>2</div></div>
+              <div id="yellow-1" ><div>1</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div id = "bottomMiddleBox">
+
+          <div class="a" id="55">1</div>
+          <div class="a yellow" id="56">2</div>
+          <div class="a" id="57">3</div>
+          <div class="a" id="58">4</div>
+          <div class="a yellow" id="59">5</div>
+          <div class="a" id="60">6</div>
+          <div class="a" id="61">7</div>
+          <div class="a yellow" id="62">8</div>
+          <div class="a" id="63">9</div>
+          <div class="a" id="64">10</div>
+          <div class="a yellow" id="65">11</div>
+          <div class="a" id="66">12</div>
+          <div class="a yellow" id="67">13</div>
+          <div class="a yellow" id="68">14</div>
+          <div class="a" id="69">15</div>
+          <div class="a" id="70">16</div>
+          <div class="a" id="71">17</div>
+          <div class="a" id="72">18</div>
+
+        </div>
+
+        <div id = "bottomRightBox">
+          <div id = "se" style="margin:auto;margin-top:1.5vmin;">
+            <div style="width:28vmin;height:27vmin;margin:auto;margin-top:4vmin;background-color: white;">
+              <div id="blue-4" ><div>4</div></div>
+              <div id="blue-3" ><div>3</div></div>
+              <div id="blue-2" ><div>2</div></div>
+              <div id="blue-1" ><div>1</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  
+
+    <script type="text/javascript" src="./js/index.js">   </script>
+
+
+  </body>
+
+</html>
